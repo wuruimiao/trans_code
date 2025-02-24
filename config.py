@@ -20,7 +20,7 @@ def get_workers():
 
 
 def do(task: FileTask) -> Error:
-    output, ok = run_cmd(["./trans_code/h265_video.sh", task.task_dir], timeout=3 * 60 * 60)
+    output, ok = run_cmd(["./h265_video.sh", task.task_dir], timeout=3 * 60 * 60)
     logger.info(f"h265 {task.id} {output}")
     if ok:
         return OK
