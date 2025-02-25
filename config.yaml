@@ -14,8 +14,4 @@ workers:
   - host: local
     status: /status
     task: /task
-    con: 1
-  - host: 127.0.0.1
-    status: /status
-    task: /task
-    con: 1
+    con: 6
