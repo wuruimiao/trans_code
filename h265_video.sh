@@ -16,7 +16,7 @@ fi
 new_name="${name%.*}_h265.mp4"
 
 echo "start $name to $new_name"
-if [ "$on_yun" == "false" ]; then
+if [ "$on_yun" == "true" ]; then
   ffmpeg -hide_banner -hwaccel cuda -i "$name" -c:v hevc_nvenc -y "$new_name"
 else
   ffmpeg -hide_banner -hwaccel auto -i "$name" -c:v libx265 -y "$new_name"
