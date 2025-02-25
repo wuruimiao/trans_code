@@ -8,5 +8,5 @@ worker_id = sys.argv[1]
 init_base("config.yaml", log_f_prefix="worker")
 worker = get_workers()[worker_id]
 worker.set_local()
-MultiM.add_p("worker", worker.start)
+MultiM.add_p("worker", worker.start, True)
 MultiM.start()
